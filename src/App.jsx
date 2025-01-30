@@ -9,6 +9,7 @@ import SalesPage from "./pages/SalesPage";
 import OrdersPage from "./pages/OrdersPage";
 import AnalyticsPage from "./pages/AnalyticsPage";
 import SettingsPage from "./pages/SettingsPage";
+// import RegisterUsers from "./pages/RegisterUsers";
 
 function App() {
 	return (
@@ -28,6 +29,11 @@ function App() {
 				<Route path='/orders' element={<OrdersPage />} />
 				<Route path='/analytics' element={<AnalyticsPage />} />
 				<Route path='/settings' element={<SettingsPage />} />
+				{/* {/* <Route path='/register-analytics' element={<RegisterAnalytics />} /> */}
+				{/* <Route path='/register-orders' element={<RegisterOrders />} /> */}
+				{/* <Route path='/register-sales' element={<RegisterSales />} /> */}
+				{/* <Route path='/register-users' element={<RegisterUsers />} /> */}
+				{/* <Route path='/register-products' element={<RegisterProducts />} /> */}
 			</Routes>
 		</div>
 	);

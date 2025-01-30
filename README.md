@@ -2,25 +2,7 @@
 
 ![Demo App](/public/screenshot-for-readme-1.png)
 ![Demo App](/public/screenshot-for-readme-2.png)
-![Demo App](/public/screenshot-for-readme-3.png)
 
-[Video Tutorial on Youtube](https://youtu.be/gK0v_d91epk)
-
-### This is a free admin dashboard ui kit built with:
-
--   React
--   Tailwind CSS
--   Recharts
--   Framer Motion
-
-It is completely responsive and can be used for any type of web application.
-
-### Run this app locally
-
-```shell
-npm install
-```
-
-```shell
-npm run start
-```
+A modern and efficient admin panel for managing users, products, sales, and more. It features interactive analytics and customizable settings. Currently improving responsiveness and adding full CRUD functionality for all dashboard data.
+    Technologies ["React", "TypeScript", "TailwindCSS", "Framer Motion", "Recharts", "React Router", "Yup"],
+    Features ["User Management", "Product Management", "Sales Analytics", "Customizable Settings"],
