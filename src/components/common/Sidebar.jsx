@@ -16,6 +16,16 @@ const SIDEBAR_ITEMS = [
 	{ name: "Orders", icon: ShoppingCart, color: "#F59E0B", href: "/orders" },
 	{ name: "Analytics", icon: TrendingUp, color: "#3B82F6", href: "/analytics" },
 	{ name: "Settings", icon: Settings, color: "#6EE7B7", href: "/settings" },
+
+];
+
+const SIDEBAR_ITEMS_REGISTER = [
+	{ name: "Products", icon: ShoppingBag, color: "#8B5CF6", href: "/register-products" },
+	{ name: "Add Users", icon: Users, color: "#EC4899", href: "/register-users" },
+	{ name: "Add Sales", icon: DollarSign, color: "#10B981", href: "/register-sales" },
+	{ name: "Add Orders", icon: ShoppingCart, color: "#F59E0B", href: "/register-orders" },
+	{ name: "Change Analytics", icon: TrendingUp, color: "#3B82F6", href: "/register-analytics" },
+
 ];
 
 const Sidebar = () => {
@@ -37,6 +47,10 @@ const Sidebar = () => {
 				>
 					<Menu size={24} />
 				</motion.button>
+
+				<div className='mt-4 flex flex-col'>
+					<p>View Section</p>
+				</div>
 
 				<nav className='mt-8 flex-grow'>
 					{SIDEBAR_ITEMS.map((item) => (
@@ -60,6 +74,36 @@ const Sidebar = () => {
 						</Link>
 					))}
 				</nav>
+
+				<div className='mt-4 flex flex-col'>
+					<p>Add Section</p>
+				</div>
+
+
+				<nav className='mt-8 flex-grow'>
+					{SIDEBAR_ITEMS_REGISTER.map((item) => (
+						<Link key={item.href} to={item.href}>
+							<motion.div className='flex items-center p-4 text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors mb-2'>
+								<item.icon size={20} style={{ color: item.color, minWidth: "20px" }} />
+								<AnimatePresence>
+									{isSidebarOpen && (
+										<motion.span
+											className='ml-4 whitespace-nowrap'
+											initial={{ opacity: 0, width: 0 }}
+											animate={{ opacity: 1, width: "auto" }}
+											exit={{ opacity: 0, width: 0 }}
+											transition={{ duration: 0.2, delay: 0.3 }}
+										>
+											{item.name}
+										</motion.span>
+									)}
+								</AnimatePresence>
+							</motion.div>
+						</Link>
+					))}
+				</nav>
+
+
 			</div>
 		</motion.div>
 	);

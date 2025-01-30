@@ -1,16 +1,10 @@
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
 import { motion } from "framer-motion";
+import { useUsers } from "../../context/UserContext";
 
-const userGrowthData = [
-	{ month: "Jan", users: 1000 },
-	{ month: "Feb", users: 1500 },
-	{ month: "Mar", users: 2000 },
-	{ month: "Apr", users: 3000 },
-	{ month: "May", users: 4000 },
-	{ month: "Jun", users: 5000 },
-];
 
 const UserGrowthChart = () => {
+	const { userGrowthData } = useUsers();
 	return (
 		<motion.div
 			className='bg-gray-800 bg-opacity-50 backdrop-blur-md shadow-lg rounded-xl p-6 border border-gray-700'
